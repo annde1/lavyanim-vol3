@@ -21,6 +21,7 @@ module.exports = {
       options: {
         fonts: ["Montserrat", "sans-serif"],
         display: "swap",
+        weights: ["400", "500", "600", "700"],
       },
     },
     {
@@ -73,6 +74,13 @@ module.exports = {
       options: {
         name: `images-diseqc`,
         path: `${__dirname}/src/images/diseqc/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images-lnb`,
+        path: `${__dirname}/src/images/lnb/`,
       },
     },
     {

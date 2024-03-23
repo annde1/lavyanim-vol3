@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"; // Import GatsbyImage and getImage
 import ListGroup from "react-bootstrap/ListGroup";
 import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
 
 const DiseqcProductDetails = ({ data }) => {
   const productDetails = data.markdownRemark.frontmatter;
@@ -35,31 +34,36 @@ const DiseqcProductDetails = ({ data }) => {
           </p>
           <ListGroup style={{ width: "100%", marginTop: "1rem" }}>
             <ListGroup.Item>
-              <div style={{ display: "flex" }}>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <p>Diseqc: </p>
                 <p>{productDetails.diseqc}</p>
               </div>
             </ListGroup.Item>
             <ListGroup.Item>
-              <div style={{ display: "flex" }}>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <p>Frequency: </p>
                 <p>{productDetails.frequency}</p>
               </div>
             </ListGroup.Item>
             <ListGroup.Item>
-              <div style={{ display: "flex" }}>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <p>Loss: </p>
                 <p>{productDetails.loss}</p>
               </div>
             </ListGroup.Item>
             <ListGroup.Item>
-              <div style={{ display: "flex" }}>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <p>Power: </p>
                 <p>{productDetails.power}</p>
               </div>
             </ListGroup.Item>
             <ListGroup.Item>
-              <div style={{ display: "flex" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
                 <p>Type: </p>
                 <p>{productDetails.type}</p>
               </div>
