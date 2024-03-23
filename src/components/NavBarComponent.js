@@ -6,11 +6,14 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "gatsby";
+import sateliteImage from "../../static/satelite.png";
+import "../styles/global.css";
 const NavBarComponent = () => {
   return (
-    <Navbar expand="lg" bg="primary" data-bs-theme="dark">
+    <Navbar expand="lg" bg="primary" data-bs-theme="dark" dir="rtl">
       <Container fluid>
         <Navbar.Brand href="#">בן אלעזר לווינים</Navbar.Brand>
+        <img src={sateliteImage} style={{ height: "3rem" }}></img>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0" navbarScroll>
