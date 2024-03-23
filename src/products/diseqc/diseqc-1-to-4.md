@@ -1,6 +1,6 @@
 ---
 title: "Diseqc 1 to 4"
-price: 15.00
+price: "15.00"
 type: "DiSEqC GD-41A"
 frequency: "950-2400 MHz"
 diseqc: "2.0"
