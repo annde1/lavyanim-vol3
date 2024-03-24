@@ -100,6 +100,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `images-dvb`,
+        path: `${__dirname}/src/images/dvb/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images-diseqc`,
         path: `${__dirname}/src/templates/`,
       },
