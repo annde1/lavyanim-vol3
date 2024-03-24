@@ -49,7 +49,9 @@ const Misc = () => {
               <Card.Body>
                 <Card.Title>{product.frontmatter.title}</Card.Title>
                 <Card.Text>Price: {product.frontmatter.price}</Card.Text>
-                <Button variant="primary">View Details</Button>
+                <Link to={"/products/misc/" + product.frontmatter.slug}>
+                  <Button variant="primary">View Details</Button>
+                </Link>
               </Card.Body>
             </Card>
           </div>
