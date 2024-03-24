@@ -8,15 +8,18 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "gatsby";
 import sateliteImage from "../../static/satelite.png";
 import "../styles/global.css";
+
 const NavBarComponent = () => {
   return (
-    <Navbar expand="lg" bg="primary" data-bs-theme="dark" dir="rtl">
+    <Navbar expand="lg" bg="primary" variant="dark">
       <Container fluid>
-        <Navbar.Brand href="#">בן אלעזר לווינים</Navbar.Brand>
         <img src={sateliteImage} style={{ height: "3rem" }}></img>
+        <Navbar.Brand href="#" className="me-auto">
+          בן אלעזר לווינים
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 my-lg-0" navbarScroll>
+          <Nav className="ms-auto" navbarScroll dir="rtl">
             <Nav.Link href="#action1" as={Link} to="/">
               בית
             </Nav.Link>
@@ -46,4 +49,5 @@ const NavBarComponent = () => {
     </Navbar>
   );
 };
+
 export default NavBarComponent;

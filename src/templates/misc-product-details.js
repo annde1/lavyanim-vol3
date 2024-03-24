@@ -27,10 +27,7 @@ const MiscProductDetails = ({ data }) => {
           </p>
         </Container>
 
-        <Container
-          className="d-flex justify-content-center"
-          style={{ height: "100vh" }}
-        >
+        <Container className="d-flex justify-content-center">
           <div
             style={{
               display: "flex",
