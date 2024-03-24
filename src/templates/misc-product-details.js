@@ -33,7 +33,6 @@ const MiscProductDetails = ({ data }) => {
         >
           <div
             style={{
-              width: "50%",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",

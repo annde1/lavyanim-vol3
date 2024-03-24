@@ -93,6 +93,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `images-mounts`,
+        path: `${__dirname}/src/images/mounts/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images-diseqc`,
         path: `${__dirname}/src/templates/`,
       },
