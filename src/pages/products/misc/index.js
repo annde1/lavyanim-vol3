@@ -39,7 +39,7 @@ const Misc = () => {
       <div className="row">
         {miscProducts.map((product) => (
           <div className="col-md-4 mb-4" key={product.frontmatter.title}>
-            <Card>
+            <Card style={{ height: "22rem" }}>
               <Card.Img
                 variant="top"
                 as={GatsbyImage}
@@ -61,22 +61,3 @@ const Misc = () => {
   );
 };
 export default Misc;
-/*
-query MyQuery {
-  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/src/products/misc/"}}) {
-    nodes {
-      frontmatter {
-        title
-        price
-        slug
-        image {
-          childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED, placeholder: NONE, width: 300)
-          }
-        }
-      }
-      html
-    }
-  }
-}
-*/
