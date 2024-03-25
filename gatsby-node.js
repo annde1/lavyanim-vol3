@@ -30,12 +30,24 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  console.log(miscData);
+  const { data: mountData } = await graphql(`
+    query {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/src/products/mounts/" } }
+      ) {
+        nodes {
+          frontmatter {
+            slug
+          }
+        }
+      }
+    }
+  `);
   // Extract products from both queries
   const diseqcProducts = diseqcData.allMarkdownRemark.nodes;
   const miscProducts = miscData.allMarkdownRemark.nodes;
+  const mountProducts = mountData.allMarkdownRemark.nodes;
 
-  console.log("MISC PRODUCT", miscProducts);
   // Create pages for Diseqc products
   diseqcProducts.forEach((product) => {
     actions.createPage({
@@ -52,6 +64,18 @@ exports.createPages = async ({ graphql, actions }) => {
     actions.createPage({
       path: `/products/misc/${product.frontmatter.slug}`,
       component: require.resolve("./src/templates/misc-product-details.js"),
+      context: {
+        slug: product.frontmatter.slug,
+      },
+    });
+  });
+
+  //Create pages for Mounts products
+
+  mountProducts.forEach((product) => {
+    actions.createPage({
+      path: `/products/mounts/${product.frontmatter.slug}`,
+      component: require.resolve("./src/templates/mounts-product-details.js"),
       context: {
         slug: product.frontmatter.slug,
       },

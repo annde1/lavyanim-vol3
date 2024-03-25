@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { Link } from "gatsby";
 const Mounts = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -14,6 +15,7 @@ const Mounts = () => {
           frontmatter {
             title
             price
+            slug
             image {
               childImageSharp {
                 gatsbyImageData(placeholder: NONE, layout: CONSTRAINED)
@@ -31,7 +33,7 @@ const Mounts = () => {
   return (
     <>
       <LayoutComponent>
-        <h1>Misc</h1>
+        <h1>Mounts</h1>
         <div className="row">
           {mountProducts.map((product) => (
             <div className="col-md-4 mb-4" key={product.frontmatter.title}>
@@ -45,8 +47,9 @@ const Mounts = () => {
                 <Card.Body>
                   <Card.Title>{product.frontmatter.title}</Card.Title>
                   <Card.Text>Price: {product.frontmatter.price}</Card.Text>
-
-                  <Button variant="primary">View Details</Button>
+                  <Link to={"/products/mounts/" + product.frontmatter.slug}>
+                    <Button variant="primary">View Details</Button>
+                  </Link>
                 </Card.Body>
               </Card>
             </div>
