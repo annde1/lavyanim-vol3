@@ -5,7 +5,16 @@ const About = ({ data }) => {
   console.log(data);
   return (
     <LayoutComponent>
-      <h1 dir="rtl">אודות</h1>{" "}
+      <h1
+        dir="rtl"
+        style={{
+          textAlign: "center",
+          marginTop: "3rem",
+          marginBottom: "3rem",
+        }}
+      >
+        אודות
+      </h1>{" "}
       <div dir="rtl">
         <p>
           אנו בעלי ותק של שני עשורים בתחום, מספקים שרות וציוד למתקינים וללקוחות

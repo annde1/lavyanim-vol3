@@ -9,8 +9,7 @@ const ProductCardComponent = ({ product }) => {
   const image = getImage(product.image);
 
   return (
-    <Card style={{ width: "18rem" }}>
-      {/* Use GatsbyImage component to display the image */}
+    <Card>
       <GatsbyImage image={image} alt={product.title} />
 
       <Card.Body className="d-flex flex-column">

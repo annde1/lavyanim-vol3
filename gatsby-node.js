@@ -43,10 +43,25 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `);
+
+  const { data: lnbData } = await graphql(`
+    query {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/src/products/lnb/" } }
+      ) {
+        nodes {
+          frontmatter {
+            slug
+          }
+        }
+      }
+    }
+  `);
   // Extract products from both queries
   const diseqcProducts = diseqcData.allMarkdownRemark.nodes;
   const miscProducts = miscData.allMarkdownRemark.nodes;
   const mountProducts = mountData.allMarkdownRemark.nodes;
+  const lnbProducts = lnbData.allMarkdownRemark.nodes;
 
   // Create pages for Diseqc products
   diseqcProducts.forEach((product) => {
@@ -76,6 +91,16 @@ exports.createPages = async ({ graphql, actions }) => {
     actions.createPage({
       path: `/products/mounts/${product.frontmatter.slug}`,
       component: require.resolve("./src/templates/mounts-product-details.js"),
+      context: {
+        slug: product.frontmatter.slug,
+      },
+    });
+  });
+
+  lnbProducts.forEach((product) => {
+    actions.createPage({
+      path: `/products/lnb/${product.frontmatter.slug}`,
+      component: require.resolve("./src/templates/lnb-product-details.js"),
       context: {
         slug: product.frontmatter.slug,
       },

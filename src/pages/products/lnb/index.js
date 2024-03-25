@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { Link } from "gatsby";
 
 const Lnb = () => {
   const data = useStaticQuery(graphql`
@@ -39,7 +40,11 @@ const Lnb = () => {
   console.log(lnbProducts);
   return (
     <LayoutComponent>
-      <h1>Lnb</h1>
+      <h1
+        style={{ textAlign: "center", marginTop: "2rem", marginBottom: "2rem" }}
+      >
+        LNB Products
+      </h1>
       <div className="row">
         {lnbProducts.map((product) => (
           <div className="col-md-4 mb-4" key={product.frontmatter.title}>
@@ -56,7 +61,9 @@ const Lnb = () => {
                 <Card.Title>{product.frontmatter.title}</Card.Title>
                 {/* Display price */}
                 <Card.Text>Price:{product.frontmatter.price}</Card.Text>
-                <Button variant="primary">View Details</Button>
+                <Link to={"/products/lnb/" + product.frontmatter.slug}>
+                  <Button variant="primary">View Details</Button>
+                </Link>
               </Card.Body>
             </Card>
           </div>

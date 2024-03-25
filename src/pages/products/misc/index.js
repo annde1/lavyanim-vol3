@@ -35,7 +35,11 @@ const Misc = () => {
   const miscProducts = data.allMarkdownRemark.nodes;
   return (
     <LayoutComponent>
-      <h1>Misc</h1>
+      <h1
+        style={{ textAlign: "center", marginTop: "3rem", marginBottom: "3rem" }}
+      >
+        Misc Products
+      </h1>
       <div className="row">
         {miscProducts.map((product) => (
           <div className="col-md-4 mb-4" key={product.frontmatter.title}>

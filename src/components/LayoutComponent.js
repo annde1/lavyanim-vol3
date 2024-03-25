@@ -7,7 +7,7 @@ const LayoutComponent = ({ children }) => {
   return (
     <>
       <NavBarComponent />
-      <Container fluid className="px-0">
+      <Container fluid style={{ width: "80vw" }}>
         {children}
       </Container>
       <FooterComponent />
