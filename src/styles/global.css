@@ -12,3 +12,9 @@ body {
   border: none; /* Remove border if needed */
   box-shadow: none; /* Remove box shadow if needed */
 }
+.customNav {
+  background-color: white !important;
+}
+.products {
+  color: white !important;
+}

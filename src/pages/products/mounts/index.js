@@ -56,7 +56,11 @@ const Mounts = () => {
                   <Card.Title>{product.frontmatter.title}</Card.Title>
                   <Card.Text>Price: {product.frontmatter.price}</Card.Text>
                   <Link to={"/products/mounts/" + product.frontmatter.slug}>
-                    <Button variant="primary">View Details</Button>
+                    <Button
+                      style={{ backgroundColor: "#2f3030", fontSize: "1rem" }}
+                    >
+                      פרטים ניספים
+                    </Button>
                   </Link>
                 </Card.Body>
               </Card>

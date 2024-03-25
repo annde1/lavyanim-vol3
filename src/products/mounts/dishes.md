@@ -1,5 +1,6 @@
 ---
 title: "צלחות לווין - גדלים שונים"
+description: "צלחות לווין - גדלים שונים"
 price: "₪ 75.00מ"
 slug: dishes
 image: ../../images/mounts/general-dishes.jpg

@@ -63,7 +63,11 @@ const Dvb = () => {
               <Card.Body>
                 <Card.Title>{product.frontmatter.title}</Card.Title>
                 <Card.Text>Price: {product.frontmatter.price}</Card.Text>
-                <Button variant="primary">View Details</Button>
+                <Button
+                  style={{ backgroundColor: "#2f3030", fontSize: "1rem" }}
+                >
+                  פרטים ניספים
+                </Button>
               </Card.Body>
             </Card>
           </div>

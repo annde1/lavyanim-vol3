@@ -23,9 +23,9 @@ const MiscProductDetails = ({ data }) => {
             alt={miscProductDetails.title}
             style={{ width: "40%" }}
           />
-          <h2 style={{ marginTop: "1rem", textAlign: "center" }}>
+          <h1 style={{ marginTop: "1rem", textAlign: "center" }}>
             {miscProductDetails.title}
-          </h2>
+          </h1>
         </Container>
 
         <Container className="d-flex justify-content-center">

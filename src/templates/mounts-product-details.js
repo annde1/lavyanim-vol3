@@ -9,12 +9,21 @@ const MountsProductDetails = ({ data }) => {
   //TODO: query an array of images doesn't work
   console.log(data);
   const variants = data.markdownRemark.frontmatter.variants;
+  const title = data.markdownRemark.frontmatter.title;
   console.log(variants);
   return (
     <>
       <LayoutComponent>
-        <h1>Mounts</h1>
-        <Table bordered hover dir="rtl">
+        <h1
+          style={{
+            textAlign: "center",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+          }}
+        >
+          {title}
+        </h1>
+        <Table bordered hover dir="rtl" style={{ fontSize: "1.1rem" }}>
           <thead>
             <tr>
               <th>#</th>
@@ -42,6 +51,7 @@ export const mountsQuery = graphql`
   query MountsQuery($slug: String) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
+        title
         variants {
           actualPrice
           optionCombination
