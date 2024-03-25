@@ -5,22 +5,25 @@ slug: satellite-finder
 image: ../../images/misc/satfind-smaller.jpg
 ---
 
-# מכשיר מתקדם לכיוון צלחת לוויין
+<div dir="rtl" style="margin-bottom: 3rem">
+<h1>מכשיר מתקדם לכיוון צלחת לוויין</h1>
+<p>
+מכשיר מתקדם לכיוון צלחת לוויין, מאפשר צפייה בתחנה בזמן הכיוון. ניתן לכוון בעזרתו תחנות HD (אך לא לצפות בהן דרכו). מכשיר קטן, קומפקטי ועמיד המגיע עם תיק נשיאה.</p>
+</div>
 
-מכשיר מתקדם לכיוון צלחת לוויין, מאפשר צפייה בתחנה בזמן הכיוון. ניתן לכוון בעזרתו תחנות HD (אך לא לצפות בהן דרכו). מכשיר קטן, קומפקטי ועמיד המגיע עם תיק נשיאה.
+## Product Details
 
-- **Support AV audio/video input and output, with DC12V power output (use of camera).**
-- **Signal quality displayed LED digital data, the sun more clear view.**
-- **New INFO function, grace a INFO for parameter information, again is article shows of signal shape, with enlarge images.**
-- **Signal lock lamp, 13 V / 18 V output indicator and the 22 V switch state indicator.**
-- **Built-in LNB feeder short circuit protection.**
-- **New hum warning, beep ring with signal strength changes, also can be the sound judgment signal strength. Can close Alarm warning.**
-- **USB upgrade, direct USB docking RS232.**
-- **Video function, test monitoring and camera, can output DC12V for the camera.**
-- **On the panel has a battery power shows, ready reference battery power.**
-- **Charging indicator light show, plugged in Charge for a Charge indicator, charging completes the lamp.**
-
-**Model KPT-968G 3.5Inch TFT LED Handheld Multifunctional Satellite Finder & Monitor (LED)**
+- Support AV audio/video input and output, with DC12V power output (use of camera).
+- Signal quality displayed LED digital data, the sun more clear view.
+- New INFO function, grace a INFO for parameter information, again is article shows of signal shape, with enlarge images.
+- Signal lock lamp, 13 V / 18 V output indicator and the 22 V switch state indicator.
+- Built-in LNB feeder short circuit protection.
+- New hum warning, beep ring with signal strength changes, also can be the sound judgment signal strength. Can close Alarm warning.
+- USB upgrade, direct USB docking RS232.
+- Video function, test monitoring and camera, can output DC12V for the camera.
+- On the panel has a battery power shows, ready reference battery power.
+- Charging indicator light show, plugged in Charge for a Charge indicator, charging completes the lamp.
+- Model KPT-968G 3.5Inch TFT LED Handheld Multifunctional Satellite Finder & Monitor (LED)
 
 ## Function
 

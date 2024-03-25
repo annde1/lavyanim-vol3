@@ -24,7 +24,7 @@ const Lnb = () => {
             image {
               childImageSharp {
                 gatsbyImageData(
-                  layout: CONSTRAINED
+                  layout: FULL_WIDTH
                   placeholder: NONE
                   width: 300
                 )

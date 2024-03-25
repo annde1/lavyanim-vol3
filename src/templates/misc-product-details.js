@@ -19,12 +19,13 @@ const MiscProductDetails = ({ data }) => {
         <Container className="d-flex justify-content-center flex-column align-items-center mt-4">
           <GatsbyImage
             image={image}
+            className="img-fluid"
             alt={miscProductDetails.title}
             style={{ width: "40%" }}
           />
-          <p style={{ fontSize: "2rem", marginTop: "1rem" }}>
+          <h2 style={{ marginTop: "1rem", textAlign: "center" }}>
             {miscProductDetails.title}
-          </p>
+          </h2>
         </Container>
 
         <Container className="d-flex justify-content-center">
@@ -54,7 +55,12 @@ const MiscProductDetails = ({ data }) => {
               </ListGroup.Item>
             </ListGroup>
             {html && (
-              <div style={{ marginTop: "2rem" }}>
+              <div
+                style={{
+                  marginTop: "2rem",
+                  width: "90%",
+                }}
+              >
                 <div dangerouslySetInnerHTML={{ __html: html }} dir="rtl" />
               </div>
             )}
