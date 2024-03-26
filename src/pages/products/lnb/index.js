@@ -37,7 +37,7 @@ const Lnb = () => {
     }
   `);
   const lnbProducts = data.allMarkdownRemark.nodes;
-  console.log(lnbProducts);
+
   return (
     <LayoutComponent>
       <h1

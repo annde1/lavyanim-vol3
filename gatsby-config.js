@@ -72,6 +72,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        // The unique name for each instance
+        name: `recommended`,
+        // Path to the directory
+        path: `${__dirname}/src/products/recommended/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images-diseqc`,
         path: `${__dirname}/src/images/diseqc/`,
       },
@@ -109,6 +118,13 @@ module.exports = {
       options: {
         name: `images-about`,
         path: `${__dirname}/src/images/about/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images-recommended`,
+        path: `${__dirname}/src/images/recommended/`,
       },
     },
     {
