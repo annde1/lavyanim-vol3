@@ -5,7 +5,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ListGroup from "react-bootstrap/ListGroup";
 
 const DvbProductDetails = ({ data }) => {
-  console.log(data);
   const dvbProductDetails = data.markdownRemark.frontmatter;
   const image = getImage(dvbProductDetails.image);
   const html = data.markdownRemark.html;

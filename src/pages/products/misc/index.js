@@ -55,10 +55,9 @@ const Misc = () => {
                 <Card.Text>Price: {product.frontmatter.price}</Card.Text>
                 <Link to={"/products/misc/" + product.frontmatter.slug}>
                   <Button
-                    variant="primary"
-                    style={{ backgroundColor: "#426b65" }}
+                    style={{ backgroundColor: "#2f3030", fontSize: "1rem" }}
                   >
-                    View Details
+                    פרטים ניספים
                   </Button>
                 </Link>
               </Card.Body>

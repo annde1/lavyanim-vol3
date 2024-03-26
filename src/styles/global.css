@@ -7,14 +7,14 @@ body {
 .custom-navbar {
   background-color: transparent !important;
 }
-.transparent-card {
-  background-color: transparent;
-  border: none; /* Remove border if needed */
-  box-shadow: none; /* Remove box shadow if needed */
-}
+
 .customNav {
   background-color: white !important;
 }
 .products {
   color: white !important;
+}
+.products ::after {
+  color: white !important;
+  margin-right: 5px;
 }

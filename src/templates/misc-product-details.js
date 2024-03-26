@@ -16,19 +16,30 @@ const MiscProductDetails = ({ data }) => {
   return (
     <>
       <LayoutComponent>
-        <Container className="d-flex justify-content-center flex-column align-items-center mt-4">
+        <h1
+          style={{
+            textAlign: "center",
+            marginTop: "4rem",
+            marginBottom: "3rem",
+          }}
+        >
+          {miscProductDetails.title}
+        </h1>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            paddingBottom: "3rem",
+          }}
+        >
           <GatsbyImage
             image={image}
             className="img-fluid"
             alt={miscProductDetails.title}
-            style={{ width: "40%" }}
           />
-          <h1 style={{ marginTop: "1rem", textAlign: "center" }}>
-            {miscProductDetails.title}
-          </h1>
-        </Container>
 
-        <Container className="d-flex justify-content-center">
           <div
             style={{
               display: "flex",
@@ -65,7 +76,7 @@ const MiscProductDetails = ({ data }) => {
               </div>
             )}
           </div>
-        </Container>
+        </div>
       </LayoutComponent>
     </>
   );

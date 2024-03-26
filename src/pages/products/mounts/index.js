@@ -26,7 +26,6 @@ const Mounts = () => {
       }
     }
   `);
-  console.log(data);
 
   const mountProducts = data.allMarkdownRemark.nodes;
 

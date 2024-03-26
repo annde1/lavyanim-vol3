@@ -54,7 +54,7 @@ const NavBarComponent = () => {
                 אודות
               </Nav.Link>
               <NavDropdown
-                title="מוצרים"
+                title={<span className="products">מוצרים</span>}
                 id="navbarScrollingDropdown"
                 style={{ color: "white", fontSize: "1.5rem", width: "100%" }}
                 className="products"
