@@ -44,13 +44,13 @@ const Diseqc = () => {
         <h1
           style={{
             textAlign: "center",
-            marginTop: "2rem",
-            marginBottom: "2rem",
+            marginTop: "3rem",
+            marginBottom: "3rem",
           }}
         >
           DiSEqc Products
         </h1>
-        <div className="row" style={{ marginBottom: "3rem" }}>
+        <div className="row" style={{ marginBottom: "4rem" }}>
           {products.map((product) => (
             <div className="col" key={product.frontmatter.slug}>
               <ProductCardComponent product={product.frontmatter} />

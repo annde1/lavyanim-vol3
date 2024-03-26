@@ -57,12 +57,25 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `);
-  // Extract products from both queries
+
+  const { data: dvbData } = await graphql(`
+    query {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/src/products/dvb/" } }
+      ) {
+        nodes {
+          frontmatter {
+            slug
+          }
+        }
+      }
+    }
+  `);
   const diseqcProducts = diseqcData.allMarkdownRemark.nodes;
   const miscProducts = miscData.allMarkdownRemark.nodes;
   const mountProducts = mountData.allMarkdownRemark.nodes;
   const lnbProducts = lnbData.allMarkdownRemark.nodes;
-
+  const dvbProducts = dvbData.allMarkdownRemark.nodes;
   // Create pages for Diseqc products
   diseqcProducts.forEach((product) => {
     actions.createPage({
@@ -101,6 +114,16 @@ exports.createPages = async ({ graphql, actions }) => {
     actions.createPage({
       path: `/products/lnb/${product.frontmatter.slug}`,
       component: require.resolve("./src/templates/lnb-product-details.js"),
+      context: {
+        slug: product.frontmatter.slug,
+      },
+    });
+  });
+
+  dvbProducts.forEach((product) => {
+    actions.createPage({
+      path: `/products/dvb/${product.frontmatter.slug}`,
+      component: require.resolve("./src/templates/dvb-product-details.js"),
       context: {
         slug: product.frontmatter.slug,
       },

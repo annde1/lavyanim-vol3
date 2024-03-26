@@ -17,6 +17,7 @@ const Dvb = () => {
           frontmatter {
             title
             price
+            slug
             previousPrice
             image {
               childImageSharp {
@@ -33,8 +34,6 @@ const Dvb = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 9;
   const totalPages = Math.ceil(dvbProducts.length / productsPerPage);
-
-  // Logic to slice products array based on current page
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = dvbProducts.slice(
@@ -42,7 +41,6 @@ const Dvb = () => {
     indexOfLastProduct
   );
 
-  // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
@@ -63,11 +61,13 @@ const Dvb = () => {
               <Card.Body>
                 <Card.Title>{product.frontmatter.title}</Card.Title>
                 <Card.Text>Price: {product.frontmatter.price}</Card.Text>
-                <Button
-                  style={{ backgroundColor: "#2f3030", fontSize: "1rem" }}
-                >
-                  פרטים ניספים
-                </Button>
+                <Link to={"/products/dvb/" + product.frontmatter.slug}>
+                  <Button
+                    style={{ backgroundColor: "#2f3030", fontSize: "1rem" }}
+                  >
+                    פרטים ניספים
+                  </Button>
+                </Link>
               </Card.Body>
             </Card>
           </div>

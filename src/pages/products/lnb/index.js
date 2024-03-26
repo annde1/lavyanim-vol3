@@ -49,7 +49,6 @@ const Lnb = () => {
         {lnbProducts.map((product) => (
           <div className="col-md-4 mb-4" key={product.frontmatter.title}>
             <Card>
-              {/* Display image */}
               <Card.Img
                 variant="top"
                 as={GatsbyImage}
@@ -57,9 +56,7 @@ const Lnb = () => {
                 alt={product.frontmatter.title}
               />
               <Card.Body>
-                {/* Display title */}
                 <Card.Title>{product.frontmatter.title}</Card.Title>
-                {/* Display price */}
                 <Card.Text>Price:{product.frontmatter.price}</Card.Text>
                 <Link to={"/products/lnb/" + product.frontmatter.slug}>
                   <Button

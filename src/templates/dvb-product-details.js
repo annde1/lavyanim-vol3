@@ -4,9 +4,10 @@ import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ListGroup from "react-bootstrap/ListGroup";
 
-const LnbProductDetails = ({ data }) => {
-  const lnbProductDetails = data.markdownRemark.frontmatter;
-  const image = getImage(lnbProductDetails.image);
+const DvbProductDetails = ({ data }) => {
+  console.log(data);
+  const dvbProductDetails = data.markdownRemark.frontmatter;
+  const image = getImage(dvbProductDetails.image);
   const html = data.markdownRemark.html;
 
   return (
@@ -15,13 +16,12 @@ const LnbProductDetails = ({ data }) => {
         <h1
           style={{
             textAlign: "center",
-            marginTop: "2rem",
-            marginBottom: "2rem",
+            marginTop: "4rem",
+            marginBottom: "3rem",
           }}
         >
-          {lnbProductDetails.title}
+          {dvbProductDetails.title}
         </h1>
-
         <div
           style={{
             display: "flex",
@@ -31,19 +31,25 @@ const LnbProductDetails = ({ data }) => {
             paddingBottom: "3rem",
           }}
         >
-          <GatsbyImage image={image} alt={lnbProductDetails.title} />
+          <GatsbyImage image={image} alt={dvbProductDetails.title} />
 
           <ListGroup style={{ width: "100%", marginTop: "1rem" }}>
             <ListGroup.Item>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <p>Price: </p>
-                <p>{lnbProductDetails.price}</p>
-              </div>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p>Type: </p>
-                <p>{lnbProductDetails.title}</p>
+                <div>
+                  <span>{dvbProductDetails.price}</span>
+                  {dvbProductDetails.previousPrice && (
+                    <span
+                      style={{
+                        marginLeft: "1rem",
+                        textDecoration: "line-through",
+                      }}
+                    >
+                      {dvbProductDetails.previousPrice}
+                    </span>
+                  )}
+                </div>
               </div>
             </ListGroup.Item>
           </ListGroup>
@@ -61,19 +67,20 @@ const LnbProductDetails = ({ data }) => {
     </>
   );
 };
-export default LnbProductDetails;
+export default DvbProductDetails;
 
-export const lnbQuery = graphql`
-  query LnbQuery($slug: String) {
+export const dvbQuery = graphql`
+  query DvbQuery($slug: String) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
-        price
         image {
           childImageSharp {
-            gatsbyImageData(width: 300, placeholder: NONE, layout: CONSTRAINED)
+            gatsbyImageData(layout: CONSTRAINED, placeholder: NONE)
           }
         }
+        price
+        previousPrice
       }
       html
     }
