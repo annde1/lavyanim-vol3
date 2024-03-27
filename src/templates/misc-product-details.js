@@ -1,16 +1,12 @@
 import React from "react";
 import LayoutComponent from "../components/LayoutComponent";
-import Container from "react-bootstrap/Container";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ListGroup from "react-bootstrap/ListGroup";
 
 const MiscProductDetails = ({ data }) => {
-  console.log(data);
-
   const miscProductDetails = data.markdownRemark.frontmatter;
   const image = getImage(miscProductDetails.image);
-  console.log(image);
   const html = data.markdownRemark.html;
 
   return (

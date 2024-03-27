@@ -6,10 +6,18 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { Link } from "gatsby";
 import Divider from "@mui/material/Divider";
-
+import { motion } from "framer-motion";
+import { useAnimation } from "framer-motion";
+import { useEffect } from "react";
 export default function Home({ data }) {
   const recommendedProducts = data.allMarkdownRemark.nodes;
-
+  const controls = useAnimation();
+  useEffect(() => {
+    controls.start({
+      opacity: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    });
+  }, [controls]);
   return (
     <>
       <LayoutComponent>
@@ -33,13 +41,15 @@ export default function Home({ data }) {
         >
           תחומי עיסוק
         </h2>
-        <p dir="rtl">
-          אנו בבן אלעזר תקשורת לווינית מתמחים בהתקנת צלחות לוויין.
-        </p>
-        <p dir="rtl">בעלי ותק בתחום התקשורת הלווינית של 20 שנה</p>
-        <p dir="rtl">
-          בעלי ותק בתחום תיקון מכשור אלקטרוני עדין ומכשור רפואי מעל ל-30 שנה.
-        </p>
+        <div style={{ fontSize: "1.2rem" }}>
+          <p dir="rtl">
+            אנו בבן אלעזר תקשורת לווינית מתמחים בהתקנת צלחות לוויין.
+          </p>
+          <p dir="rtl">בעלי ותק בתחום התקשורת הלווינית של 20 שנה</p>
+          <p dir="rtl">
+            בעלי ותק בתחום תיקון מכשור אלקטרוני עדין ומכשור רפואי מעל ל-30 שנה.
+          </p>
+        </div>
         <Divider sx={{ bgcolor: "gray", mt: 4 }} />
         <h2
           dir="rtl"
@@ -53,31 +63,42 @@ export default function Home({ data }) {
         <div className="row">
           {recommendedProducts.map((product) => (
             <div className="col-md-4 mb-4" key={product.frontmatter.title}>
-              <Card style={{ height: "35rem" }}>
-                <Card.Img
-                  variant="top"
-                  as={GatsbyImage}
-                  image={getImage(product.frontmatter.image)}
-                  alt={product.frontmatter.title}
-                />
-                <Card.Body>
-                  <Card.Title>{product.frontmatter.title}</Card.Title>
-                  <Card.Text>
-                    <span style={{ marginRight: "1rem" }}>Price:</span>
-                    {product.frontmatter.price}
-                  </Card.Text>
+              <motion.div
+                className="box"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.5,
+                  ease: [0, 0.71, 0.2, 1.01],
+                }}
+              >
+                <Card style={{ height: "35rem" }}>
+                  <Card.Img
+                    variant="top"
+                    as={GatsbyImage}
+                    image={getImage(product.frontmatter.image)}
+                    alt={product.frontmatter.title}
+                  />
+                  <Card.Body>
+                    <Card.Title>{product.frontmatter.title}</Card.Title>
+                    <Card.Text>
+                      <span style={{ marginRight: "1rem" }}>Price:</span>
+                      {product.frontmatter.price}
+                    </Card.Text>
 
-                  <Link
-                    to={"/products/recommended/" + product.frontmatter.slug}
-                  >
-                    <Button
-                      style={{ backgroundColor: "#2f3030", fontSize: "1rem" }}
+                    <Link
+                      to={"/products/recommended/" + product.frontmatter.slug}
                     >
-                      פרטים ניספים
-                    </Button>
-                  </Link>
-                </Card.Body>
-              </Card>
+                      <Button
+                        style={{ backgroundColor: "#2f3030", fontSize: "1rem" }}
+                      >
+                        פרטים ניספים
+                      </Button>
+                    </Link>
+                  </Card.Body>
+                </Card>
+              </motion.div>
             </div>
           ))}
         </div>

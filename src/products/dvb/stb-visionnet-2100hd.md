@@ -6,9 +6,12 @@ previousPrice: null
 image: ../../images/dvb/VISIONNET-2100HD_SMALL0.jpg
 ---
 
+<div dir="rtl">
 VisionNet 2100HD התומך בקליטת שידורי HD כמו גם שידורי SD. הממיר מגיע עם חיבור RG-45 לרשת, חיבור HDMI ויציאות אודיו דיגיטלי באופטי ו SPDIF עם תמיכה בדולבי דיגיטל. אמולטור CCcam ו Newcamd לחיבור לשרתים. מאפשר צפייה בסרטים ממחשב או מדיסק USB. שני חריצי CI וחריץ לכרטיס חכם.
 
 הממיר מגיע עם שלט המאפשר שליטה בטלוויזיה, וידאו ו DVD.
+
+</div>
 
 ### Receiver Features
 

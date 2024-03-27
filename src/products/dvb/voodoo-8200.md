@@ -6,6 +6,8 @@ previousPrice: "₪ 350.00"
 image: ../../images/dvb/voodoo.jpg
 ---
 
+<div dir="rtl">
+
 - תוצרת קוריאה
 - תמיכה ב-MPEG-2 DIGITAL ותמיכה מלאה ב-DVB
 - תדר הקלט 950~2150 מגה-הרץ
@@ -25,3 +27,5 @@ image: ../../images/dvb/voodoo.jpg
 - משחקים
 - החלפת תחנות בפחות משניה
 - תומך בשרתים
+
+</div>

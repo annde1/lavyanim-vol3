@@ -6,7 +6,7 @@ previousPrice: "₪ 900.00"
 image: ../../images/dvb/Topfield_TF6000PVRE_SMALL0.jpg
 ---
 
-המוצר מגיע ללא כונן קשיח
+<p dir="rtl">המוצר מגיע ללא כונן קשיח</p>
 
 **Specification**
 

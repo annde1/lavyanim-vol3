@@ -31,7 +31,7 @@ const Misc = () => {
       }
     }
   `);
-  console.log(data);
+
   const miscProducts = data.allMarkdownRemark.nodes;
   return (
     <LayoutComponent>

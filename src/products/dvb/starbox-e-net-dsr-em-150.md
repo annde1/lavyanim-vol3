@@ -6,4 +6,4 @@ previousPrice: null
 image: ../../images/dvb/starbox-enet.jpg
 ---
 
-ממיר תומך בשרת
+<p dir="rtl">ממיר תומך בשרת</p>

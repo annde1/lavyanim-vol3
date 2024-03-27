@@ -4,7 +4,6 @@ import FooterComponent from "./FooterComponent";
 import Container from "react-bootstrap/Container";
 import Alert from "@mui/material/Alert";
 import "../styles/global.css";
-import { useMediaQuery } from "@mui/material";
 
 const LayoutComponent = ({ children }) => {
   const [showAlert, setShowAlert] = useState(true);

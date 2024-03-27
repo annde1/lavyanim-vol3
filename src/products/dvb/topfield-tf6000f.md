@@ -6,10 +6,13 @@ previousPrice: null
 image: ../../images/dvb/TF6000f.jpg
 ---
 
+<div dir="rtl">
 - תפריט מרובה שפות
 - אפשרות לתצוגת מוזאיק (MOSAIC – MULTI PICTURES)
 - הצגת תמונת משתמש במסך תחנות הרדיו.
 - אפשרות תצוגת תמונה בתוך תמונה (PICTURE IN PICTURE)
+
+</div>
 
 **Features**
 

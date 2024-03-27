@@ -4,7 +4,6 @@ import ProductCardComponent from "../../../components/ProductCardComponent";
 import { useStaticQuery, graphql } from "gatsby";
 
 const Diseqc = () => {
-  // Fetch the products using useStaticQuery
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(

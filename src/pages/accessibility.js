@@ -1,6 +1,5 @@
 import React from "react";
 import LayoutComponent from "../components/LayoutComponent";
-import { Link } from "gatsby";
 const Accessibility = () => {
   return (
     <>

@@ -1,16 +1,15 @@
 import React from "react";
 import LayoutComponent from "../components/LayoutComponent";
-import Container from "react-bootstrap/Container";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Table from "react-bootstrap/Table";
+import "../styles/global.css";
 
 const MountsProductDetails = ({ data }) => {
-  //TODO: query an array of images doesn't work
-  console.log(data);
   const variants = data.markdownRemark.frontmatter.variants;
   const title = data.markdownRemark.frontmatter.title;
-  console.log(variants);
+  const images = data.markdownRemark.frontmatter.images;
+
   return (
     <>
       <LayoutComponent>
@@ -23,6 +22,7 @@ const MountsProductDetails = ({ data }) => {
         >
           {title}
         </h1>
+
         <Table bordered hover dir="rtl" style={{ fontSize: "1.1rem" }}>
           <thead>
             <tr>
@@ -41,6 +41,23 @@ const MountsProductDetails = ({ data }) => {
             ))}
           </tbody>
         </Table>
+        <div
+          style={{
+            marginTop: "3rem",
+            marginBottom: "3rem",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          {images.map((image, index) => (
+            <GatsbyImage
+              key={index}
+              image={getImage(image)}
+              alt={`Slide ${index}`}
+            />
+          ))}
+        </div>
       </LayoutComponent>
     </>
   );
@@ -57,6 +74,11 @@ export const mountsQuery = graphql`
           optionCombination
         }
         image {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
+          }
+        }
+        images {
           childImageSharp {
             gatsbyImageData(layout: CONSTRAINED, placeholder: NONE)
           }

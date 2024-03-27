@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-fonts",
       options: {
-        fonts: ["Montserrat", "sans-serif"],
+        fonts: ["Montserrat", "sans-serif", "Rubik Scribble"],
         display: "swap",
         weights: ["400", "500", "600", "700"],
       },

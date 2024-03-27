@@ -4,6 +4,9 @@ description: "צלחות לווין - גדלים שונים"
 price: "₪ 75.00מ"
 slug: dishes
 image: ../../images/mounts/general-dishes.jpg
+images:
+  - ../../images/mounts/general-dishes2.jpg
+
 variants:
   - optionCombination: '80 ס"מ'
     actualPrice: "₪ 75.00"

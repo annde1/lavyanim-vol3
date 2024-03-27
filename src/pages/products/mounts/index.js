@@ -44,7 +44,7 @@ const Mounts = () => {
         </h1>
         <div className="row">
           {mountProducts.map((product) => (
-            <div className="col-md-4 mb-4" key={product.frontmatter.title}>
+            <div className="col-md-4 mb-4" key={product.frontmatter.slug}>
               <Card style={{ height: "22rem" }}>
                 <Card.Img
                   variant="top"

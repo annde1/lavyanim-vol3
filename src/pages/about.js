@@ -2,7 +2,6 @@ import React from "react";
 import LayoutComponent from "../components/LayoutComponent";
 import { graphql } from "gatsby";
 const About = ({ data }) => {
-  console.log(data);
   return (
     <LayoutComponent>
       <h1
@@ -15,7 +14,7 @@ const About = ({ data }) => {
       >
         אודות
       </h1>{" "}
-      <div dir="rtl">
+      <div dir="rtl" style={{ fontSize: "1.2rem" }}>
         <p>
           אנו בעלי ותק של שני עשורים בתחום, מספקים שרות וציוד למתקינים וללקוחות
           פרטיים כאחד בכל רחבי הארץ.

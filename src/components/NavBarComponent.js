@@ -38,7 +38,7 @@ const NavBarComponent = () => {
             >
               <MenuIcon />
             </IconButton>
-            {/* <Typography
+            <Typography
               variant="h6"
               noWrap
               component="div"
@@ -46,15 +46,23 @@ const NavBarComponent = () => {
                 flexGrow: 1,
                 display: { xs: "none", sm: "block" },
                 mr: 2,
-                fontFamily: "Montserrat",
+                fontFamily: "Rubik Scribble",
                 fontWeight: 100,
+                fontSize: "1.6rem",
               }}
             >
               בן אלעזר לווינים
-            </Typography> */}
+            </Typography>
+
             <img
               src={logo}
-              style={{ position: "absolute", top: 18, left: 15 }}
+              alt="Ben Elazar"
+              style={{
+                position: "absolute",
+                top: 18,
+                left: 15,
+                height: "2rem",
+              }}
             />
           </Toolbar>
         </AppBar>

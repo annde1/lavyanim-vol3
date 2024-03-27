@@ -5,7 +5,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
 const ProductCardComponent = ({ product }) => {
-  // Get the image data using GatsbyImage's getImage function
   const image = getImage(product.image);
 
   return (

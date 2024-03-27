@@ -6,7 +6,7 @@ previousPrice: "₪ 600.00"
 image: ../../images/dvb/opticum_actus_mini.jpg
 ---
 
-מותגי מדבקה הזהים במפרט: OptiBox, Innova, Jaguar
+<p dir="rtl">מותגי מדבקה הזהים במפרט: OptiBox, Innova, Jaguar</p>
 
 ### Features
 

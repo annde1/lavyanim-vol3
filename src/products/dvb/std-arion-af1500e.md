@@ -6,6 +6,7 @@ previousPrice: null
 image: ../../images/dvb/arion_af1500e.jpg
 ---
 
+<div dir="rtl">
 מכשיר תוצרת קוריאה
 
 - תחנות רדיו + טלוויזיה ורשימת מועדפים.
@@ -13,3 +14,5 @@ image: ../../images/dvb/arion_af1500e.jpg
 - מבוסס מערכת עדכון לחלונות (WINDOWS) דרך המחשב.
 - מדריך תכניות אלקטרוני (EPG) על המסך OSD.
 - הצגת התכנית בזמן הצגת ה EPG.
+
+</div>

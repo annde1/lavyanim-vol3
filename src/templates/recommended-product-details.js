@@ -3,7 +3,6 @@ import LayoutComponent from "../components/LayoutComponent";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const RecommendedProductDetails = ({ data }) => {
-  console.log(data);
   const recommendedProduct = data.markdownRemark.frontmatter;
   const html = data.markdownRemark.html;
   const image = getImage(recommendedProduct.image);

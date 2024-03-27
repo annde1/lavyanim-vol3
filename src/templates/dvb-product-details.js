@@ -64,7 +64,7 @@ const DvbProductDetails = ({ data }) => {
                 marginTop: "2rem",
               }}
             >
-              <div dangerouslySetInnerHTML={{ __html: html }} dir="rtl" />
+              <div dangerouslySetInnerHTML={{ __html: html }} />
             </div>
           )}
         </div>

@@ -6,4 +6,4 @@ previousPrice: null
 image: ../../images/dvb/ARION-AF9300PVR.jpg
 ---
 
-ממיר מקליט
+<p dir="rtl">ממיר מקליט</p>

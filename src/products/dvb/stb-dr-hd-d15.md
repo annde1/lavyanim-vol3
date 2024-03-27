@@ -6,6 +6,8 @@ previousPrice: null
 image: ../../images/dvb/d15.jpg
 ---
 
+### Features
+
 - Now with much better cost. And faster CPU,too
 - Support of Wi-Fi with USB dongle
 - NTFS support for Mediaplayer

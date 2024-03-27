@@ -6,6 +6,8 @@ previousPrice: "₪ 600.00"
 image: ../../images/dvb/magic_front.jpg
 ---
 
+<div dir="rtl">
+
 ### מכירת חיסול
 
 - ממיר מתקדם עם 2 טיונרים (הקלטה לאמצעי מדיה חיצוני וצפייה בתחנה אחרת).
@@ -14,3 +16,5 @@ image: ../../images/dvb/magic_front.jpg
 - תמיכה בקבצי מדיה פופולריים (JPEG\MP3).
 - משחקים
 - EPG
+
+</div>

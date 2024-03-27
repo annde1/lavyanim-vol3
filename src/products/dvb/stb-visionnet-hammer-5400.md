@@ -6,7 +6,7 @@ previousPrice: null
 image: ../../images/dvb/visionnet_hammer_front.png
 ---
 
-ממיר HDTVדיגיטלי לוויני מבוסס לינוקס. ממיר מתקדם ביותר עם חיבור לאינטרנט להתחברות לשרתי שיתוף. הממיר מאפשר צפייה בשידורי HD וגם שידורים SD ברזולוציה עד 1080p.
+<div dir="rtl">ממיר HDTVדיגיטלי לוויני מבוסס לינוקס. ממיר מתקדם ביותר עם חיבור לאינטרנט להתחברות לשרתי שיתוף. הממיר מאפשר צפייה בשידורי HD וגם שידורים SD ברזולוציה עד 1080p.
 
 ממיר עם טיונר שתומך גם בשידורים החדשים מסוג DVB-S2ומאפשר צפייה בשידורים מסוג MPEG4 H264לאיכות מקסימלית כמו גם בשידורים הדיגיטליים הרגילים MPEG2.
 
@@ -16,14 +16,14 @@ image: ../../images/dvb/visionnet_hammer_front.png
 
 הממיר מכיל תוכנות אופציונליות רבות כגון דפדפן אינטרנט Opera שמאפשר גלישה לאתרים על גבי הטלויזיה וכן צפייה מובנית באתר YouTube.
 
-הממיר תומך ברוב סוגי השיתופים הפופולריים.
+הממיר תומך ברוב סוגי השיתופים הפופולריים.</div>
 
-Description:
+### Description:
 
 - S2-St7111 HD is an advanced, interactive digital set-top box based on Linux operation system.
 - The product support full HD function, enables high definition and standard definition on DVB-S/S2 and supports both MPEG-2 and MPEG4/H.264.
 
-Key Features:
+### Key Features:
 
 - Linux OS supported
 - Fully DVB-S2/DVB-S Compliant

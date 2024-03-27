@@ -4,6 +4,12 @@ description: "רגליים"
 price: "₪ 70.00מ"
 slug: mounts
 image: ../../images/mounts/short_and_small1.jpg
+images:
+  - ../../images/mounts/leg_regular_tall_smaller0.jpg
+  - ../../images/mounts/extender_long11.jpg
+  - ../../images/mounts/flange_tall_with_distance0.jpg
+  - ../../images/mounts/flange_tall0.jpg
+
 variants:
   - optionCombination: "מטקה קצרה"
     actualPrice: "₪ 70.00"
