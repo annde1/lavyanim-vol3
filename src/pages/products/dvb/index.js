@@ -47,8 +47,9 @@ const Dvb = () => {
     <LayoutComponent>
       <h1
         style={{ textAlign: "center", marginTop: "3rem", marginBottom: "3rem" }}
+        dir="rtl"
       >
-        DVB Products
+        ממירים
       </h1>
       <div className="row">
         {currentProducts.map((product) => (

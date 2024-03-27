@@ -5,11 +5,15 @@ slug: wireless-av2
 image: ../../images/misc/wirelessa-vtransmitterreceiver30.jpg
 ---
 
+<div dir="rtl">
+
 # משדר ומקלט אלחוטי המשדר תמונה וקול באופן אלחוטי
 
 נמאס לכם מכבלים שזרוקים על הרצפה בין הממיר לטלוויזיה? המוצר הזה הוא הפתרון בשבילכם:
 
 המוצר כולל משדר ומקלט אלחוטי המשדר תוכניות DVD, DVR, IPTV, Satellite STB, Digital TV STB, CCD camera ומכשירים דומים אחרים באופן אלחוטי אל הטלוויזיה. המוצר יכול לשדר מספר חיבורים למקום אחד או לשדר מספר חיבורים לכמה מקומות או חיבור אחד לכמה מקומות בבית.
+
+</div>
 
 The transmitter and the receiver are used in the same channel in pair and can be used in the modes of point-to-multipoint or multipoint.
 Images received by means of radio are vivid and stable, the color is flamboyant, and the sound is clear.

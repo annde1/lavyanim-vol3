@@ -5,6 +5,8 @@ slug: installation
 image: ../../images/misc/general-dishes2.jpg
 ---
 
+<div dir="rtl">
+
 # התקנת צלחת לווין
 
 התקנת צלחת לווין מורכבת מחבילת בסיס.
@@ -21,3 +23,5 @@ image: ../../images/misc/general-dishes2.jpg
 
 - בעלי ותק בתחום התקשורת הלווינית של 20 שנה
 - בעלי וותק בתחום תיקון מכשור אלקטרוני עדין ומכשור רפואי מעל ל-30 שנה.
+
+</div>

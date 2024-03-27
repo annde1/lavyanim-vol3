@@ -41,9 +41,14 @@ const Lnb = () => {
   return (
     <LayoutComponent>
       <h1
-        style={{ textAlign: "center", marginTop: "2rem", marginBottom: "2rem" }}
+        style={{
+          textAlign: "center",
+          marginTop: "2rem",
+          marginBottom: "2rem",
+        }}
+        dir="rtl"
       >
-        LNB Products
+        מוצרי LNB
       </h1>
       <div className="row">
         {lnbProducts.map((product) => (

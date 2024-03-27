@@ -38,8 +38,9 @@ const Mounts = () => {
             marginTop: "3rem",
             marginBottom: "3rem",
           }}
+          dir="rtl"
         >
-          Mount Products
+          צלחות ורגליים
         </h1>
         <div className="row">
           {mountProducts.map((product) => (

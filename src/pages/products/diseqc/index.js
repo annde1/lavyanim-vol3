@@ -41,21 +41,24 @@ const Diseqc = () => {
   return (
     <>
       <LayoutComponent>
-        <h1
-          style={{
-            textAlign: "center",
-            marginTop: "3rem",
-            marginBottom: "3rem",
-          }}
-        >
-          DiSEqc Products
-        </h1>
-        <div className="row" style={{ marginBottom: "4rem" }}>
-          {products.map((product) => (
-            <div className="col" key={product.frontmatter.slug}>
-              <ProductCardComponent product={product.frontmatter} />
-            </div>
-          ))}
+        <div>
+          <h1
+            style={{
+              textAlign: "center",
+              marginTop: "3rem",
+              marginBottom: "3rem",
+            }}
+            dir="rtl"
+          >
+            מוצרי DiSEqc
+          </h1>
+          <div className="row" style={{ marginBottom: "4rem" }}>
+            {products.map((product) => (
+              <div className="col" key={product.frontmatter.slug}>
+                <ProductCardComponent product={product.frontmatter} />
+              </div>
+            ))}
+          </div>
         </div>
       </LayoutComponent>
     </>

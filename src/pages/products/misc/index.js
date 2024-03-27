@@ -37,8 +37,9 @@ const Misc = () => {
     <LayoutComponent>
       <h1
         style={{ textAlign: "center", marginTop: "3rem", marginBottom: "3rem" }}
+        dir="rtl"
       >
-        Misc Products
+        ציוד נוולה
       </h1>
       <div className="row">
         {miscProducts.map((product) => (

@@ -1,14 +1,15 @@
 import * as React from "react";
-import NavBarComponent from "../components/NavBarComponent";
 import LayoutComponent from "../components/LayoutComponent";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { Link } from "gatsby";
+import Divider from "@mui/material/Divider";
+
 export default function Home({ data }) {
   const recommendedProducts = data.allMarkdownRemark.nodes;
 
-  console.log(recommendedProducts);
   return (
     <>
       <LayoutComponent>
@@ -22,7 +23,7 @@ export default function Home({ data }) {
         >
           דף הבית
         </h1>
-        <hr class="hr" />
+        <Divider sx={{ bgcolor: "gray" }} />
         <h2
           dir="rtl"
           style={{
@@ -39,7 +40,7 @@ export default function Home({ data }) {
         <p dir="rtl">
           בעלי ותק בתחום תיקון מכשור אלקטרוני עדין ומכשור רפואי מעל ל-30 שנה.
         </p>
-        <hr class="hr" style={{ marginTop: "2rem" }} />
+        <Divider sx={{ bgcolor: "gray", mt: 4 }} />
         <h2
           dir="rtl"
           style={{
@@ -61,13 +62,20 @@ export default function Home({ data }) {
                 />
                 <Card.Body>
                   <Card.Title>{product.frontmatter.title}</Card.Title>
-                  <Card.Text>Price:{product.frontmatter.price}</Card.Text>
+                  <Card.Text>
+                    <span style={{ marginRight: "1rem" }}>Price:</span>
+                    {product.frontmatter.price}
+                  </Card.Text>
 
-                  <Button
-                    style={{ backgroundColor: "#2f3030", fontSize: "1rem" }}
+                  <Link
+                    to={"/products/recommended/" + product.frontmatter.slug}
                   >
-                    פרטים ניספים
-                  </Button>
+                    <Button
+                      style={{ backgroundColor: "#2f3030", fontSize: "1rem" }}
+                    >
+                      פרטים ניספים
+                    </Button>
+                  </Link>
                 </Card.Body>
               </Card>
             </div>
@@ -87,6 +95,7 @@ export const recommendedQuery = graphql`
         frontmatter {
           title
           price
+          slug
           image {
             childImageSharp {
               gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)

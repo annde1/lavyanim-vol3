@@ -34,7 +34,13 @@ const DvbProductDetails = ({ data }) => {
 
           <ListGroup style={{ width: "100%", marginTop: "1rem" }}>
             <ListGroup.Item>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  fontSize: "1.3rem",
+                }}
+              >
                 <p>Price: </p>
                 <div>
                   <span>{dvbProductDetails.price}</span>

@@ -1,11 +1,12 @@
 import React from "react";
 import { MDBFooter, MDBContainer, MDBCol, MDBRow } from "mdb-react-ui-kit";
+import { Link } from "gatsby";
 const FooterComponent = () => {
   return (
     <>
       <MDBFooter
         className="text-white text-center text-lg-left"
-        style={{ backgroundColor: "#2f3030" }}
+        style={{ backgroundColor: "#0B0D12" }}
       >
         <MDBContainer className="p-4">
           <MDBRow>
@@ -17,13 +18,11 @@ const FooterComponent = () => {
               <p style={{ color: "white" }}>
                 בעלי ותק בתחום התקשורת הלווינית של 20 שנה | צור קשר - 0528785050
               </p>
-
-              <a
-                href="#!"
-                style={{ textDecoration: "underline", color: "white" }}
-              >
-                הצהרת הנגישות של האתר
-              </a>
+              <Link to="/accessibility">
+                <p style={{ textDecoration: "underline", color: "white" }}>
+                  הצהרת הנגישות של האתר
+                </p>
+              </Link>
             </MDBCol>
           </MDBRow>
         </MDBContainer>

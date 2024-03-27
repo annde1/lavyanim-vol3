@@ -71,12 +71,27 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `);
+
+  const { data: recommendedProductsData } = await graphql(`
+    query {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/src/products/recommended/" } }
+      ) {
+        nodes {
+          frontmatter {
+            slug
+          }
+        }
+      }
+    }
+  `);
   const diseqcProducts = diseqcData.allMarkdownRemark.nodes;
   const miscProducts = miscData.allMarkdownRemark.nodes;
   const mountProducts = mountData.allMarkdownRemark.nodes;
   const lnbProducts = lnbData.allMarkdownRemark.nodes;
   const dvbProducts = dvbData.allMarkdownRemark.nodes;
-  // Create pages for Diseqc products
+  const recommendedProducts = recommendedProductsData.allMarkdownRemark.nodes;
+
   diseqcProducts.forEach((product) => {
     actions.createPage({
       path: `/products/diseqc/${product.frontmatter.slug}`,
@@ -124,6 +139,18 @@ exports.createPages = async ({ graphql, actions }) => {
     actions.createPage({
       path: `/products/dvb/${product.frontmatter.slug}`,
       component: require.resolve("./src/templates/dvb-product-details.js"),
+      context: {
+        slug: product.frontmatter.slug,
+      },
+    });
+  });
+
+  recommendedProducts.forEach((product) => {
+    actions.createPage({
+      path: `/products/recommended/${product.frontmatter.slug}`,
+      component: require.resolve(
+        "./src/templates/recommended-product-details.js"
+      ),
       context: {
         slug: product.frontmatter.slug,
       },

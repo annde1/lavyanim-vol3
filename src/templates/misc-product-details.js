@@ -69,10 +69,9 @@ const MiscProductDetails = ({ data }) => {
               <div
                 style={{
                   marginTop: "2rem",
-                  width: "90%",
                 }}
               >
-                <div dangerouslySetInnerHTML={{ __html: html }} dir="rtl" />
+                <div dangerouslySetInnerHTML={{ __html: html }} />
               </div>
             )}
           </div>
